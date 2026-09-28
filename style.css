@@ -1,0 +1,150 @@
+/* Reset básico de margens e configuração de fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo escuro do site */
+body {
+  background-color: #050508;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Cabeçalho com título azul neon e subtítulo roxo */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #00f3ff;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.6);
+  margin-bottom: 5px;
+}
+
+header .subtitulo {
+  color: #bc13fe;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(188, 19, 254, 0.4);
+}
+
+/* Container central das informações */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Organização dos cards de resumo em grade */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+/* Cards pretos com borda e brilho azul neon */
+.card {
+  background-color: #000000;
+  border: 2px solid #00f3ff;
+  box-shadow: 0 0 12px rgba(0, 243, 255, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  font-size: 0.85rem;
+  color: #bc13fe;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.valor-card {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.subtexto-card {
+  display: block;
+  font-size: 0.75rem;
+  color: #00f3ff;
+  margin-top: 5px;
+}
+
+/* Container da tabela com borda e brilho roxo neon */
+.tabela-container {
+  background-color: #000000;
+  border: 2px solid #bc13fe;
+  box-shadow: 0 0 12px rgba(188, 19, 254, 0.4);
+  border-radius: 12px;
+  overflow-x: auto; /* Permite rolar pro lado no celular se não couber */
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #1a1a2e;
+}
+
+th {
+  color: #00f3ff;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid #bc13fe;
+}
+
+td {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 243, 255, 0.05);
+}
+
+/* Destaques de cores para a situação da disciplina */
+.situacao-bom {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.situacao-atencao {
+  color: #ff3366;
+  font-weight: bold;
+}
+
+.situacao-indisponivel {
+  color: #8888aa;
+  font-style: italic;
+}
+
+/* Ajustes para telas menores (celular) */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  th, td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+}

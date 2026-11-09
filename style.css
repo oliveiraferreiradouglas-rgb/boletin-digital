@@ -1,4 +1,4 @@
-/* Reset básico de margens e configuração de fonte */
+//* Reset básico de margens e configuração de fonte */
 * {
   margin: 0;
   padding: 0;
@@ -148,3 +148,181 @@ tbody tr:hover {
     font-size: 0.85rem;
   }
 }
+
+/* Novas adições para a Etapa 2 (Autenticação por PIN e Edição) */
+
+.card-login {
+  background-color: #000000;
+  border: 2px solid #00f3ff;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 420px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.card-login h2 {
+  color: #00f3ff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+}
+
+.info-aluno {
+  color: #bc13fe;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.campo-grupo {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.campo-grupo label {
+  display: block;
+  margin-bottom: 8px;
+  color: #00f3ff;
+  font-size: 0.9rem;
+}
+
+input[type="password"],
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  background-color: #0a0a14;
+  border: 1px solid #bc13fe;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #00f3ff;
+  box-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+}
+
+input.campo-invalido {
+  border-color: #ff3366 !important;
+  box-shadow: 0 0 8px rgba(255, 51, 102, 0.6) !important;
+}
+
+.btn-neon {
+  background-color: transparent;
+  color: #00f3ff;
+  border: 2px solid #00f3ff;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-neon:hover {
+  background-color: #00f3ff;
+  color: #000000;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.8);
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: #bc13fe;
+  border: 2px solid #bc13fe;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(188, 19, 254, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-secundario:hover {
+  background-color: #bc13fe;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.8);
+}
+
+.mensagem-status {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.mensagem-status.erro {
+  color: #ff3366;
+}
+
+.mensagem-status.sucesso {
+  color: #00ff88;
+}
+
+.mensagem-status.info {
+  color: #00f3ff;
+}
+
+.acoes-boletim {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+/* Modal de Edição */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 5, 8, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-conteudo {
+  background-color: #000000;
+  border: 2px solid #bc13fe;
+  box-shadow: 0 0 20px rgba(188, 19, 254, 0.6);
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 950px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-conteudo h2 {
+  color: #bc13fe;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal-conteudo table input {
+  width: 70px;
+  text-align: center;
+  padding: 6px;
+  font-size: 0.9rem;
+}
+
+.modal-botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
